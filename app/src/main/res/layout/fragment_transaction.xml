@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.TransactionFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Menu Toko Babeh"
+        android:background="@color/white"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="30dp"/>
+    <EditText
+        android:inputType="textPersonName"
+        android:id="@+id/txtCari"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_search"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        android:hint="Cari item"
+        android:drawableEnd="@drawable/search_ic"/>
+    <TextView
+        android:id="@+id/txtSemua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="Semua"/>
+
+    <RelativeLayout
+        android:layout_marginBottom="90dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/txtPriceTotal"
+                android:layout_marginBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            style="?android:attr/progressBarStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"/>
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rv_data"
+                            tools:itemCount="100"/>
+                    </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subtotal"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_above="@id/btnBayar"
+            android:layout_marginHorizontal="22dp" />
+        <TextView
+            android:id="@+id/txtPriceTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 0"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_above="@+id/btnBayar"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="22dp"/>
+        <Button
+            android:id="@+id/btnBayar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:text="Bayar Sekarang"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+    </RelativeLayout>
+</LinearLayout>

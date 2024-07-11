@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/titleMenuDibeli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nama"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/priceMenuDibeli"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/priceMenuDibeli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Harga"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toEndOf="@id/titleMenuDibeli"
+                    app:layout_constraintEnd_toStartOf="@id/qtyMenuDibeli"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/qtyMenuDibeli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="QTY"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toEndOf="@id/priceMenuDibeli"
+                    app:layout_constraintEnd_toStartOf="@id/subtMenuDibeli"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:id="@+id/subtMenuDibeli"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Subtotal"
+                    android:textSize="15dp"
+                    app:layout_constraintStart_toEndOf="@id/qtyMenuDibeli"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:gravity="center"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

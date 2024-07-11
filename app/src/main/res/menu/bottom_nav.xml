@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/transactions"
+        android:title="Transaksi"
+        android:icon="@drawable/shopping_cart"/>
+    <item
+       android:id="@+id/kosong"
+        android:title=" " />
+    <item
+        android:id="@+id/profile"
+        android:title="Profil"
+        android:icon="@drawable/circle_acount"/>
+</menu>
